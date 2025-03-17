@@ -5,8 +5,9 @@ import productRoutes from "./routes/product.route.js";
 import path from "path"
 // const express = require("express");
 
-
-dotenv.config();
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config();
+}
 
 connectDB();
 
